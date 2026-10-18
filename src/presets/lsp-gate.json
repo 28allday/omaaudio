@@ -1,0 +1,13 @@
+{
+  "plugins": ["http://lsp-plug.in/plugins/lv2/gate_stereo", "http://lsp-plug.in/plugins/lv2/gate_mono"],
+  "presets": [
+    {"id": "dialogue", "name": "Dialogue noise gate", "group": "Voice",
+     "note": "Lowers the room between words by 15 dB rather than shutting it off, so the joins are not heard.",
+     "controls": {"enabled": 1, "scm": 1, "shpm": 1, "shpf": 100, "gt": {"db": -45}, "gr": {"db": -15},
+                  "at": 5, "rt": 200, "hold": 50, "mk": 1, "cdw": 100}},
+    {"id": "drum", "name": "Drum gate", "group": "Music",
+     "note": "Closes fast between hits on a close drum microphone to cut spill.",
+     "controls": {"enabled": 1, "scm": 0, "shpm": 0, "gt": {"db": -30}, "gr": {"db": -40},
+                  "at": 0.5, "rt": 80, "hold": 20, "mk": 1, "cdw": 100}}
+  ]
+}

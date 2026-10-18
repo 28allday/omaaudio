@@ -1,0 +1,26 @@
+{
+  "plugins": ["http://calf.sourceforge.net/plugins/MonoCompressor"],
+  "presets": [
+    {"id": "podcast-voice", "name": "Podcast voice", "group": "Voice",
+     "note": "Steady 3:1 levelling for a spoken voice; about 4–6 dB off the loudest words.",
+     "controls": {"threshold": {"db": -20}, "ratio": 3, "attack": 10, "release": 120, "makeup": {"db": 5}, "knee": {"db": 6}, "mix": 1}},
+    {"id": "interview", "name": "Interview levelling", "group": "Voice",
+     "note": "Gentler and slower, for two people at different distances from the microphone.",
+     "controls": {"threshold": {"db": -24}, "ratio": 2.5, "attack": 15, "release": 200, "makeup": {"db": 6}, "knee": {"db": 9}, "mix": 1}},
+    {"id": "broadcast-voice", "name": "Broadcast voice", "group": "Voice",
+     "note": "Firmer 4:1 control with a quick attack, for a voice that must sit forward.",
+     "controls": {"threshold": {"db": -22}, "ratio": 4, "attack": 5, "release": 80, "makeup": {"db": 7}, "knee": {"db": 6}, "mix": 1}},
+    {"id": "gentle-vocal", "name": "Gentle vocal", "group": "Voice",
+     "note": "Light 2:1 smoothing for a sung vocal; keeps the dynamics of the performance.",
+     "controls": {"threshold": {"db": -18}, "ratio": 2, "attack": 20, "release": 150, "makeup": {"db": 3}, "knee": {"db": 9}, "mix": 1}},
+    {"id": "parallel-drums", "name": "Parallel drums", "group": "Music",
+     "note": "Heavy 8:1 compression blended in at 40 %, for weight without losing the hits.",
+     "controls": {"threshold": {"db": -30}, "ratio": 8, "attack": 5, "release": 80, "makeup": {"db": 8}, "knee": {"db": 3}, "mix": 0.4}},
+    {"id": "bass-control", "name": "Bass control", "group": "Music",
+     "note": "4:1 to keep a bass guitar or synth bass at an even level.",
+     "controls": {"threshold": {"db": -20}, "ratio": 4, "attack": 15, "release": 150, "makeup": {"db": 4}, "knee": {"db": 6}, "mix": 1}},
+    {"id": "acoustic-guitar", "name": "Acoustic guitar", "group": "Music",
+     "note": "3:1 with a medium attack: evens the strumming and keeps the pick attack.",
+     "controls": {"threshold": {"db": -18}, "ratio": 3, "attack": 15, "release": 150, "makeup": {"db": 3}, "knee": {"db": 6}, "mix": 1}}
+  ]
+}

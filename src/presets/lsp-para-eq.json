@@ -1,0 +1,27 @@
+{
+  "plugins": ["http://lsp-plug.in/plugins/lv2/para_equalizer_x8_stereo", "http://lsp-plug.in/plugins/lv2/para_equalizer_x8_mono"],
+  "presets": [
+    {"id": "voice-clarity", "name": "Voice clarity", "group": "Voice",
+     "note": "A low cut at 80 Hz, less mud at 250 Hz, a little presence and air: a common first move on a spoken voice.",
+     "controls": {"enabled": 1, "mode": 0,
+                  "ft_0": 2, "fm_0": 0, "s_0": 1, "f_0": 80,
+                  "ft_1": 1, "fm_1": 0, "f_1": 250, "g_1": {"db": -3}, "q_1": 1.2,
+                  "ft_2": 1, "fm_2": 0, "f_2": 3500, "g_2": {"db": 2.5}, "q_2": 1,
+                  "ft_3": 3, "fm_3": 0, "f_3": 10000, "g_3": {"db": 2}, "q_3": 0.707}},
+    {"id": "rumble-cut", "name": "Rumble cut", "group": "Repair",
+     "note": "A steep high-pass at 80 Hz takes out traffic, handling noise and air conditioning.",
+     "controls": {"enabled": 1, "mode": 0, "ft_0": 2, "fm_0": 0, "s_0": 1, "f_0": 80}},
+    {"id": "de-mud", "name": "De-mud", "group": "Voice",
+     "note": "A low cut at 60 Hz and a broad 4 dB dip around 300 Hz.",
+     "controls": {"enabled": 1, "mode": 0, "ft_0": 2, "fm_0": 0, "s_0": 1, "f_0": 60,
+                  "ft_1": 1, "fm_1": 0, "f_1": 300, "g_1": {"db": -4}, "q_1": 1.4}},
+    {"id": "air", "name": "Air lift", "group": "Music",
+     "note": "A gentle high shelf from 12 kHz.",
+     "controls": {"enabled": 1, "mode": 0, "ft_0": 3, "fm_0": 0, "f_0": 12000, "g_0": {"db": 3}, "q_0": 0.707}},
+    {"id": "telephone", "name": "Telephone", "group": "Effect",
+     "note": "Steep cuts below 300 Hz and above 3.4 kHz with a lift at 1.5 kHz.",
+     "controls": {"enabled": 1, "mode": 0, "ft_0": 2, "fm_0": 0, "s_0": 2, "f_0": 300,
+                  "ft_1": 4, "fm_1": 0, "s_1": 2, "f_1": 3400,
+                  "ft_2": 1, "fm_2": 0, "f_2": 1500, "g_2": {"db": 3}, "q_2": 0.8}}
+  ]
+}

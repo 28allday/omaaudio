@@ -1,0 +1,17 @@
+{
+  "plugins": ["urn:omaaudio:gain"],
+  "presets": [
+    {"id": "down-6", "name": "6 dB quieter", "group": "Utility",
+     "note": "Half the level.",
+     "controls": {"gain": -6}},
+    {"id": "down-3", "name": "3 dB quieter", "group": "Utility",
+     "note": "A small step down.",
+     "controls": {"gain": -3}},
+    {"id": "up-3", "name": "3 dB louder", "group": "Utility",
+     "note": "A small step up; watch the peaks.",
+     "controls": {"gain": 3}},
+    {"id": "up-6", "name": "6 dB louder", "group": "Utility",
+     "note": "Twice the level; watch the peaks.",
+     "controls": {"gain": 6}}
+  ]
+}

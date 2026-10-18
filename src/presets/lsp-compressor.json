@@ -1,0 +1,25 @@
+{
+  "plugins": ["http://lsp-plug.in/plugins/lv2/compressor_stereo", "http://lsp-plug.in/plugins/lv2/compressor_mono"],
+  "presets": [
+    {"id": "podcast-voice", "name": "Podcast voice", "group": "Voice",
+     "note": "3:1 from −20 dB, RMS, with a 100 Hz filter on the detector so plosives do not pump it.",
+     "controls": {"enabled": 1, "cm": 0, "scm": 1, "shpm": 1, "shpf": 100, "al": {"db": -20}, "cr": 3,
+                  "at": 10, "rt": 120, "kn": {"db": -6}, "mk": {"db": 5}, "cdw": 100}},
+    {"id": "gentle-vocal", "name": "Gentle vocal", "group": "Voice",
+     "note": "2:1 from −18 dB, slower, for a sung vocal.",
+     "controls": {"enabled": 1, "cm": 0, "scm": 1, "shpm": 1, "shpf": 80, "al": {"db": -18}, "cr": 2,
+                  "at": 20, "rt": 150, "kn": {"db": -9}, "mk": {"db": 3}, "cdw": 100}},
+    {"id": "mix-bus-glue", "name": "Mix bus glue", "group": "Music",
+     "note": "2:1 with a slow attack on the whole mix, about 1–2 dB of reduction.",
+     "controls": {"enabled": 1, "cm": 0, "scm": 1, "shpm": 1, "shpf": 60, "al": {"db": -16}, "cr": 2,
+                  "at": 30, "rt": 200, "kn": {"db": -6}, "mk": {"db": 2}, "cdw": 100}},
+    {"id": "drum-bus", "name": "Drum bus", "group": "Music",
+     "note": "4:1 on peaks with a 10 ms attack so the hits keep their front.",
+     "controls": {"enabled": 1, "cm": 0, "scm": 0, "shpm": 0, "al": {"db": -18}, "cr": 4,
+                  "at": 10, "rt": 100, "kn": {"db": -3}, "mk": {"db": 4}, "cdw": 100}},
+    {"id": "bass-control", "name": "Bass control", "group": "Music",
+     "note": "4:1 to keep a bass at an even level.",
+     "controls": {"enabled": 1, "cm": 0, "scm": 1, "shpm": 0, "al": {"db": -20}, "cr": 4,
+                  "at": 15, "rt": 150, "kn": {"db": -6}, "mk": {"db": 4}, "cdw": 100}}
+  ]
+}

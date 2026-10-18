@@ -1,0 +1,21 @@
+{
+  "plugins": ["http://calf.sourceforge.net/plugins/VintageDelay"],
+  "presets": [
+    {"id": "slap-back", "name": "Slap-back", "group": "Music",
+     "note": "One quick 110 ms repeat, tape-coloured, for vocals and guitars.",
+     "controls": {"on": 1, "timing": 1, "ms": 110, "subdiv": 4, "time_l": 4, "time_r": 4, "feedback": 0.1,
+                  "amount": 0.3, "dry": 1, "mix_mode": 0, "medium": 1, "width": 0.5, "fragmentation": 0}},
+    {"id": "quarter-echo", "name": "Quarter-note echo", "group": "Music",
+     "note": "Repeats on the beat at 120 BPM (500 ms); set BPM to the song.",
+     "controls": {"on": 1, "timing": 0, "bpm": 120, "subdiv": 4, "time_l": 4, "time_r": 4, "feedback": 0.35,
+                  "amount": 0.25, "dry": 1, "mix_mode": 0, "medium": 1, "width": 1, "fragmentation": 0}},
+    {"id": "ping-pong", "name": "Ping-pong eighths", "group": "Music",
+     "note": "Eighth-note repeats at 120 BPM bouncing left and right.",
+     "controls": {"on": 1, "timing": 0, "bpm": 120, "subdiv": 4, "time_l": 2, "time_r": 2, "feedback": 0.4,
+                  "amount": 0.25, "dry": 1, "mix_mode": 1, "medium": 0, "width": 1, "fragmentation": 0}},
+    {"id": "doubler", "name": "Doubler", "group": "Music",
+     "note": "A single 30 ms copy, spread wide, to thicken a vocal or guitar.",
+     "controls": {"on": 1, "timing": 1, "ms": 30, "subdiv": 4, "time_l": 4, "time_r": 4, "feedback": 0,
+                  "amount": 0.4, "dry": 1, "mix_mode": 0, "medium": 0, "width": 1, "fragmentation": 0}}
+  ]
+}

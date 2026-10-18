@@ -1,0 +1,13 @@
+{
+  "plugins": ["http://lsp-plug.in/plugins/lv2/deesser_stereo", "http://lsp-plug.in/plugins/lv2/deesser_mono"],
+  "presets": [
+    {"id": "lower-voice", "name": "Lower voice", "group": "Voice",
+     "note": "Listens above 4 kHz with its peak at 5.5 kHz and reduces “s” sounds by 4:1.",
+     "controls": {"enabled": 1, "hpf_s": 1, "hpf_f": 4000, "pk1_on": 1, "pk1_f": 5500,
+                  "thresh": {"db": -24}, "ratio": 4, "att": 2, "rel": 30}},
+    {"id": "higher-voice", "name": "Higher voice", "group": "Voice",
+     "note": "Listens above 5 kHz with its peak at 7 kHz, for a higher voice.",
+     "controls": {"enabled": 1, "hpf_s": 1, "hpf_f": 5000, "pk1_on": 1, "pk1_f": 7000,
+                  "thresh": {"db": -24}, "ratio": 4, "att": 2, "rel": 30}}
+  ]
+}

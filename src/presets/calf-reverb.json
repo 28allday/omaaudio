@@ -1,0 +1,25 @@
+{
+  "plugins": ["http://calf.sourceforge.net/plugins/Reverb"],
+  "presets": [
+    {"id": "small-room", "name": "Small room", "group": "Room",
+     "note": "A short, natural room (about 0.7 s) to place a dry sound in a space.",
+     "controls": {"on": 1, "room_size": 0, "decay_time": 0.7, "hf_damp": 6000, "diffusion": 0.6,
+                  "amount": 0.2, "dry": 1, "predelay": 8, "bass_cut": 200, "treble_cut": 8000}},
+    {"id": "dialogue-ambience", "name": "Dialogue ambience", "group": "Room",
+     "note": "Just enough room (0.5 s, low level) to match a close voice to its scene.",
+     "controls": {"on": 1, "room_size": 0, "decay_time": 0.5, "hf_damp": 4000, "diffusion": 0.5,
+                  "amount": 0.1, "dry": 1, "predelay": 5, "bass_cut": 300, "treble_cut": 6000}},
+    {"id": "vocal-plate", "name": "Vocal plate", "group": "Music",
+     "note": "A smooth, bright 2 s tail with 30 ms pre-delay so the words stay clear.",
+     "controls": {"on": 1, "room_size": 4, "decay_time": 2, "hf_damp": 9000, "diffusion": 0.8,
+                  "amount": 0.22, "dry": 1, "predelay": 30, "bass_cut": 250, "treble_cut": 9000}},
+    {"id": "medium-room", "name": "Medium room", "group": "Music",
+     "note": "A 1.2 s room for instruments and backing vocals.",
+     "controls": {"on": 1, "room_size": 1, "decay_time": 1.2, "hf_damp": 6000, "diffusion": 0.7,
+                  "amount": 0.2, "dry": 1, "predelay": 15, "bass_cut": 200, "treble_cut": 8000}},
+    {"id": "hall", "name": "Concert hall", "group": "Music",
+     "note": "A large 2.8 s hall with a darker tail.",
+     "controls": {"on": 1, "room_size": 2, "decay_time": 2.8, "hf_damp": 5500, "diffusion": 0.7,
+                  "amount": 0.25, "dry": 1, "predelay": 25, "bass_cut": 150, "treble_cut": 7000}}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "plugins": ["http://calf.sourceforge.net/plugins/Limiter"],
+  "presets": [
+    {"id": "podcast", "name": "Podcast, peaks at −1 dB", "group": "Delivery",
+     "note": "Holds peaks under −1 dB with 4× oversampling, the usual ceiling for podcast platforms.",
+     "controls": {"limit": {"db": -1}, "attack": 5, "release": 50, "asc": 1, "asc_coeff": 0.5,
+                  "oversampling": 4, "auto_level": 0}},
+    {"id": "streaming-music", "name": "Streaming music, −1 dB", "group": "Delivery",
+     "note": "A slower release for music, peaks under −1 dB.",
+     "controls": {"limit": {"db": -1}, "attack": 5, "release": 100, "asc": 1, "asc_coeff": 0.5,
+                  "oversampling": 4, "auto_level": 0}},
+    {"id": "broadcast", "name": "Broadcast, peaks at −2 dB", "group": "Delivery",
+     "note": "Extra headroom for broadcast deliveries that ask for −2 dB peaks.",
+     "controls": {"limit": {"db": -2}, "attack": 5, "release": 80, "asc": 1, "asc_coeff": 0.5,
+                  "oversampling": 4, "auto_level": 0}},
+    {"id": "safety", "name": "Safety catch", "group": "Delivery",
+     "note": "Only catches the odd stray peak just below full scale.",
+     "controls": {"limit": {"db": -0.3}, "attack": 2, "release": 30, "asc": 0, "oversampling": 2, "auto_level": 0}}
+  ]
+}

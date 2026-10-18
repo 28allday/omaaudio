@@ -1,0 +1,63 @@
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<urn:omaaudio:lowcut>
+    a lv2:Plugin, lv2:HighpassPlugin ;
+    doap:name "OmaAudio Low Cut" ;
+    doap:license <https://opensource.org/licenses/MIT> ;
+    doap:maintainer [ foaf:name "OmaAudio" ] ;
+    rdfs:comment "Removes rumble, handling noise and the low thump of popped p and b sounds below the chosen frequency (24 dB per octave)." ;
+    lv2:optionalFeature lv2:hardRTCapable ;
+    lv2:port [
+        a lv2:InputPort, lv2:AudioPort ; lv2:index 0 ; lv2:symbol "in" ; lv2:name "Input"
+    ] , [
+        a lv2:OutputPort, lv2:AudioPort ; lv2:index 1 ; lv2:symbol "out" ; lv2:name "Output"
+    ] , [
+        a lv2:InputPort, lv2:ControlPort ; lv2:index 2 ; lv2:symbol "frequency" ; lv2:name "Frequency" ;
+        lv2:minimum 20 ; lv2:maximum 300 ; lv2:default 80 ; units:unit units:hz
+    ] .
+
+<urn:omaaudio:hum>
+    a lv2:Plugin, lv2:FilterPlugin ;
+    doap:name "OmaAudio Hum Removal" ;
+    doap:license <https://opensource.org/licenses/MIT> ;
+    doap:maintainer [ foaf:name "OmaAudio" ] ;
+    rdfs:comment "Removes mains hum: narrow notches at 50 or 60 Hz and its harmonics." ;
+    lv2:optionalFeature lv2:hardRTCapable ;
+    lv2:port [
+        a lv2:InputPort, lv2:AudioPort ; lv2:index 0 ; lv2:symbol "in" ; lv2:name "Input"
+    ] , [
+        a lv2:OutputPort, lv2:AudioPort ; lv2:index 1 ; lv2:symbol "out" ; lv2:name "Output"
+    ] , [
+        a lv2:InputPort, lv2:ControlPort ; lv2:index 2 ; lv2:symbol "mains" ; lv2:name "Mains" ;
+        lv2:minimum 50 ; lv2:maximum 60 ; lv2:default 50 ; units:unit units:hz ;
+        lv2:portProperty lv2:enumeration ;
+        lv2:scalePoint [ rdfs:label "50 Hz" ; rdf:value 50 ] , [ rdfs:label "60 Hz" ; rdf:value 60 ]
+    ] , [
+        a lv2:InputPort, lv2:ControlPort ; lv2:index 3 ; lv2:symbol "harmonics" ; lv2:name "Harmonics" ;
+        lv2:minimum 1 ; lv2:maximum 8 ; lv2:default 4 ; lv2:portProperty lv2:integer
+    ] .
+
+<urn:omaaudio:width>
+    a lv2:Plugin, lv2:SpatialPlugin ;
+    doap:name "OmaAudio Width" ;
+    doap:license <https://opensource.org/licenses/MIT> ;
+    doap:maintainer [ foaf:name "OmaAudio" ] ;
+    rdfs:comment "Narrows or widens a stereo sound: 0 % is mono, 100 % unchanged, 200 % twice as wide." ;
+    lv2:optionalFeature lv2:hardRTCapable ;
+    lv2:port [
+        a lv2:InputPort, lv2:AudioPort ; lv2:index 0 ; lv2:symbol "in_l" ; lv2:name "Left input"
+    ] , [
+        a lv2:InputPort, lv2:AudioPort ; lv2:index 1 ; lv2:symbol "in_r" ; lv2:name "Right input"
+    ] , [
+        a lv2:OutputPort, lv2:AudioPort ; lv2:index 2 ; lv2:symbol "out_l" ; lv2:name "Left output"
+    ] , [
+        a lv2:OutputPort, lv2:AudioPort ; lv2:index 3 ; lv2:symbol "out_r" ; lv2:name "Right output"
+    ] , [
+        a lv2:InputPort, lv2:ControlPort ; lv2:index 4 ; lv2:symbol "width" ; lv2:name "Width" ;
+        lv2:minimum 0 ; lv2:maximum 200 ; lv2:default 100 ; units:unit units:pc
+    ] .

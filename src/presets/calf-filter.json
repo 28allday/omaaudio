@@ -1,0 +1,17 @@
+{
+  "plugins": ["http://calf.sourceforge.net/plugins/Filter"],
+  "presets": [
+    {"id": "rumble-cut", "name": "Rumble cut", "group": "Repair",
+     "note": "A 24 dB per octave high-pass at 80 Hz.",
+     "controls": {"mode": 4, "freq": 80, "res": 0.707, "inertia": 20}},
+    {"id": "voice-low-cut", "name": "Voice low cut", "group": "Voice",
+     "note": "A gentle 12 dB per octave high-pass at 100 Hz for a spoken voice.",
+     "controls": {"mode": 3, "freq": 100, "res": 0.707, "inertia": 20}},
+    {"id": "hiss-cut", "name": "Hiss cut", "group": "Repair",
+     "note": "A 24 dB per octave low-pass at 12 kHz softens tape or preamp hiss.",
+     "controls": {"mode": 1, "freq": 12000, "res": 0.707, "inertia": 20}},
+    {"id": "telephone", "name": "Telephone band", "group": "Effect",
+     "note": "A band-pass around 1.2 kHz for a small, phone-like sound.",
+     "controls": {"mode": 7, "freq": 1200, "res": 0.9, "inertia": 20}}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "plugins": ["http://calf.sourceforge.net/plugins/Exciter"],
+  "presets": [
+    {"id": "voice-presence", "name": "Voice presence", "group": "Voice",
+     "note": "Adds harmonics above 4 kHz, mixed in at −6 dB, to bring a dull voice forward.",
+     "controls": {"freq": 4000, "amount": {"db": -6}, "drive": 6, "blend": 0, "ceil_active": 1, "ceil": 16000}},
+    {"id": "air", "name": "Air", "group": "Music",
+     "note": "Subtle harmonics above 8 kHz for openness.",
+     "controls": {"freq": 8000, "amount": {"db": -4}, "drive": 5, "blend": 0, "ceil_active": 1, "ceil": 18000}},
+    {"id": "sparkle", "name": "Gentle sparkle", "group": "Music",
+     "note": "A little brightness above 6 kHz for a mix or an acoustic instrument.",
+     "controls": {"freq": 6000, "amount": {"db": -8}, "drive": 4, "blend": 0, "ceil_active": 1, "ceil": 16000}}
+  ]
+}

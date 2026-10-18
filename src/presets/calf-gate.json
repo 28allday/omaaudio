@@ -1,0 +1,17 @@
+{
+  "plugins": ["http://calf.sourceforge.net/plugins/Gate"],
+  "presets": [
+    {"id": "dialogue", "name": "Dialogue noise gate", "group": "Voice",
+     "note": "Lowers the room between words by 15 dB rather than shutting it off, so the joins are not heard.",
+     "controls": {"threshold": {"db": -45}, "range": {"db": -15}, "ratio": 3, "attack": 5, "release": 200,
+                  "knee": {"db": 6}, "detection": 0, "makeup": 1}},
+    {"id": "room-tone", "name": "Gentle expander", "group": "Voice",
+     "note": "A light 2:1 expander that eases background noise down by up to 10 dB.",
+     "controls": {"threshold": {"db": -50}, "range": {"db": -10}, "ratio": 2, "attack": 10, "release": 300,
+                  "knee": {"db": 9}, "detection": 0, "makeup": 1}},
+    {"id": "drum", "name": "Drum gate", "group": "Music",
+     "note": "Closes fast between hits on a close drum microphone to cut spill from the rest of the kit.",
+     "controls": {"threshold": {"db": -30}, "range": {"db": -40}, "ratio": 10, "attack": 1, "release": 80,
+                  "knee": {"db": 3}, "detection": 1, "makeup": 1}}
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "plugins": ["http://calf.sourceforge.net/plugins/Equalizer5Band"],
+  "presets": [
+    {"id": "voice-clarity", "name": "Voice clarity", "group": "Voice",
+     "note": "Less boom and mud, a little more presence and air: a common first move on a spoken voice.",
+     "controls": {"ls_active": 1, "ls_freq": 120, "ls_level": {"db": -4}, "ls_q": 0.707,
+                  "p1_active": 1, "p1_freq": 250, "p1_level": {"db": -3}, "p1_q": 1.2,
+                  "p3_active": 1, "p3_freq": 3500, "p3_level": {"db": 2.5}, "p3_q": 1,
+                  "hs_active": 1, "hs_freq": 10000, "hs_level": {"db": 2}, "hs_q": 0.707}},
+    {"id": "rumble-cut", "name": "Rumble cut", "group": "Repair",
+     "note": "A deep low shelf below 80 Hz takes out traffic, handling noise and air conditioning.",
+     "controls": {"ls_active": 1, "ls_freq": 80, "ls_level": {"db": -18}, "ls_q": 0.707}},
+    {"id": "de-mud", "name": "De-mud", "group": "Voice",
+     "note": "A broad 4 dB dip around 300 Hz clears a boxy or muddy sound.",
+     "controls": {"p1_active": 1, "p1_freq": 300, "p1_level": {"db": -4}, "p1_q": 1.4}},
+    {"id": "presence", "name": "Presence lift", "group": "Voice",
+     "note": "3 dB around 4 kHz helps a voice cut through music or effects.",
+     "controls": {"p3_active": 1, "p3_freq": 4000, "p3_level": {"db": 3}, "p3_q": 0.9}},
+    {"id": "air", "name": "Air lift", "group": "Music",
+     "note": "A gentle high shelf from 12 kHz for openness and sparkle.",
+     "controls": {"hs_active": 1, "hs_freq": 12000, "hs_level": {"db": 3}, "hs_q": 0.707}},
+    {"id": "telephone", "name": "Telephone", "group": "Effect",
+     "note": "Cuts the lows and highs and lifts 1.5 kHz, like a voice on a phone line.",
+     "controls": {"ls_active": 1, "ls_freq": 300, "ls_level": {"db": -24}, "ls_q": 0.707,
+                  "hs_active": 1, "hs_freq": 3400, "hs_level": {"db": -24}, "hs_q": 0.707,
+                  "p2_active": 1, "p2_freq": 1500, "p2_level": {"db": 4}, "p2_q": 0.8}}
+  ]
+}

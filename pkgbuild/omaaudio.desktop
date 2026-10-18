@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=OmaAudio
+GenericName=Audio Editor
+Comment=Audio editing, mixing and mastering
+TryExec=omaaudio
+Exec=omaaudio %f
+Icon=omaaudio
+Terminal=false
+Categories=AudioVideo;Audio;AudioVideoEditing;
+MimeType=audio/x-wav;audio/wav;audio/vnd.wave;audio/flac;audio/x-flac;audio/x-aiff;audio/ogg;audio/x-vorbis+ogg;audio/x-opus+ogg;audio/mpeg;
+Keywords=audio;editor;waveform;voiceover;multitrack;mastering;omarchy;
+StartupWMClass=omaaudio

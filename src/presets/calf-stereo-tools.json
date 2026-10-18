@@ -1,0 +1,23 @@
+{
+  "plugins": ["http://calf.sourceforge.net/plugins/StereoTools"],
+  "presets": [
+    {"id": "mono-sum", "name": "Mono (both channels)", "group": "Utility",
+     "note": "Sums left and right to mono, to check a mix or fix a stereo file with one mic.",
+     "controls": {"mode": 5}},
+    {"id": "left-to-both", "name": "Left channel to both", "group": "Repair",
+     "note": "Plays the left channel on both sides: for a recording with the mic on the left only.",
+     "controls": {"mode": 3}},
+    {"id": "right-to-both", "name": "Right channel to both", "group": "Repair",
+     "note": "Plays the right channel on both sides.",
+     "controls": {"mode": 4}},
+    {"id": "swap", "name": "Swap left and right", "group": "Utility",
+     "note": "Exchanges the two channels.",
+     "controls": {"mode": 6}},
+    {"id": "wider", "name": "A little wider", "group": "Music",
+     "note": "Widens the stereo image slightly; check the mix still works in mono.",
+     "controls": {"mode": 0, "stereo_base": 0.25}},
+    {"id": "narrower", "name": "Narrower", "group": "Music",
+     "note": "Halves the width, for a bed that should sit behind a voice.",
+     "controls": {"mode": 0, "stereo_base": -0.5}}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "plugins": ["urn:omaaudio:denoise"],
+  "presets": [
+    {"id": "light", "name": "Light", "group": "Repair",
+     "note": "Takes the edge off steady background noise and keeps the voice natural.",
+     "controls": {"amount": 40}},
+    {"id": "medium", "name": "Medium", "group": "Repair",
+     "note": "A noisy room or air conditioning.",
+     "controls": {"amount": 70}},
+    {"id": "strong", "name": "Strong", "group": "Repair",
+     "note": "Loud, steady noise; listen for a watery sound and back off if it appears.",
+     "controls": {"amount": 100}}
+  ]
+}

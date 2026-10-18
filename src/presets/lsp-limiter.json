@@ -1,0 +1,17 @@
+{
+  "plugins": ["http://lsp-plug.in/plugins/lv2/limiter_stereo", "http://lsp-plug.in/plugins/lv2/limiter_mono"],
+  "presets": [
+    {"id": "podcast", "name": "Podcast, true peak −1 dB", "group": "Delivery",
+     "note": "True-peak limiting at −1 dB, the usual ceiling for podcast platforms.",
+     "controls": {"enabled": 1, "th": {"db": -1}, "ovs": 22, "mode": 0, "lk": 5, "at": 5, "rt": 20, "alr": 1}},
+    {"id": "streaming-music", "name": "Streaming music, −1 dB", "group": "Delivery",
+     "note": "True-peak −1 dB with a wider, smoother shape for music.",
+     "controls": {"enabled": 1, "th": {"db": -1}, "ovs": 22, "mode": 1, "lk": 5, "at": 5, "rt": 20, "alr": 1}},
+    {"id": "broadcast", "name": "Broadcast, true peak −2 dB", "group": "Delivery",
+     "note": "Extra headroom for deliveries that ask for −2 dB true peak.",
+     "controls": {"enabled": 1, "th": {"db": -2}, "ovs": 22, "mode": 0, "lk": 5, "at": 5, "rt": 20, "alr": 1}},
+    {"id": "safety", "name": "Safety catch", "group": "Delivery",
+     "note": "Only catches stray peaks just below full scale.",
+     "controls": {"enabled": 1, "th": {"db": -0.3}, "ovs": 0, "mode": 0, "lk": 2, "at": 2, "rt": 10, "alr": 0}}
+  ]
+}

@@ -1,0 +1,264 @@
+# OmaAudio default shortcuts.
+#
+# Each action below has a shortcut. Change a value in your own copy to choose
+# a different shortcut. The menu and help show your current choices.
+#
+# Copy this to $XDG_CONFIG_HOME/omaaudio/keymap.toml (usually ~/.config/omaaudio/) and
+# edit it to rebind. Entries in that file override these; anything left out keeps the
+# default below.
+#
+# Format is action = "binding". Modifiers are Ctrl, Shift, Alt and Meta, joined with
+# "+", modifiers first, e.g. "Ctrl+Shift+Z".
+
+play_stop = "Space"
+go_start = "Home"
+go_end = "End"
+open_file = "Ctrl+O"
+show_recent_documents = "Ctrl+Alt+O"
+close_window = "Escape"
+nudge_back = "Left"
+nudge_forward = "Right"
+# J, K and L: backwards, stop, forwards; J or L again doubles the speed (to 8x).
+# L also picks the lasso on the Spectral page, where the Spectral tools keep their
+# letters.
+shuttle_back = "J"
+shuttle_stop = "K"
+shuttle_play = "L"
+
+# Zoom and scroll. Wheel gestures are bindings like any other: write them as
+# "Scroll" with the usual modifier prefixes.
+zoom = "Ctrl+Scroll"
+scroll_horizontal = "Shift+Scroll"
+zoom_in = "Ctrl+="
+zoom_out = "Ctrl+-"
+zoom_fit = "Ctrl+0"
+zoom_selection = "Ctrl+E"
+# The waveform fills the window; again puts the panels back.
+fill_window = "`"
+
+# Selection.
+select_all = "Ctrl+A"
+select_start = "["
+select_end = "]"
+# I and O set the selection's in and out points at the playhead, as [ and ] do.
+# O also picks the harmonic tool on the Spectral page.
+mark_in = "I"
+mark_out = "O"
+clear_selection = "Ctrl+D"
+# Q and W move the playhead to the selection's start and end.
+go_selection_start = "Q"
+go_selection_end = "W"
+
+# Editing.
+cut = "Ctrl+X"
+copy = "Ctrl+C"
+paste = "Ctrl+V"
+# Delete leaves the gap; close-the-gap ripples what follows earlier. The latter is
+# also on the lanes' right-click menu.
+delete_selection = "Delete"
+delete_close_gap = "Shift+Delete"
+# Explicitly remove the same time interval from every track, keeping them aligned.
+delete_time_all_tracks = "Ctrl+Alt+Delete"
+trim = "Ctrl+T"
+split = "Ctrl+K"
+fade_in = "Ctrl+I"
+fade_out = "Ctrl+Shift+I"
+gain_up = "Ctrl+Up"
+gain_down = "Ctrl+Down"
+undo = "Ctrl+Z"
+redo = "Ctrl+Shift+Z"
+
+# Tracks. Ordinary edits act on the focused track, so which one has focus matters -- the status
+# line names it, and the focused lane is tinted.
+add_track = "Ctrl+Shift+N"
+remove_track = "Ctrl+Shift+W"
+import_file = "Ctrl+Shift+O"
+import_session = "Ctrl+Shift+Alt+O"
+focus_next_track = "Down"
+focus_prev_track = "Up"
+toggle_mute = "Ctrl+M"
+toggle_solo = "Ctrl+Shift+S"
+move_track_up = "Ctrl+Alt+Up"
+move_track_down = "Ctrl+Alt+Down"
+
+# Projects. A session is a directory ending in .omaaudio (.omawave before the rename). A dirty session is
+# autosaved to its recovery layer (amendment A22); a save takes the layer away.
+save = "Ctrl+S"
+save_as = "Ctrl+Shift+Alt+S"
+open_project = "Ctrl+Shift+P"
+new_project = "Ctrl+N"
+toggle_autosave = "Ctrl+Alt+A"
+autosave_now = "Ctrl+Alt+S"
+
+# Plugins. LV2 inserts, pre-fader and pre-pan. The browser lists everything installed
+# and says why anything it will not host is refused; the rack is the focused track's
+# chain and the controls of whichever slot is selected.
+show_plugins = "Ctrl+P"
+show_plugin_manager = "Ctrl+Shift+Alt+P"
+show_plugin_favorites = "Shift+Alt+P"
+show_rack = "Ctrl+R"
+bypass_track_plugins = "Ctrl+B"
+# Before and after for the whole project: play without any effect, for comparing.
+hear_without_effects = "Alt+B"
+# Apply the effect last applied to a selection again, with its settings.
+repeat_effect = "Ctrl+Shift+Alt+R"
+# Recipes: run the last one again (Ctrl+Alt+R is the Spectral page's Rebuild),
+# and open the Recipes tab.
+repeat_recipe = "Shift+Alt+R"
+show_recipes = ""
+# Tidy pauses: a page of the Sound tab (Edit › Tidy Pauses…).
+show_tidy_pauses = "Shift+Alt+T"
+
+# Bindings for actions that do not exist yet are ignored, so later phases can be
+# rebound in advance without breaking anything.
+#
+record = "Ctrl+Shift+R"
+show_recording = ""
+# The Audio Setup panel: devices, rates, JACK clients. Unbound by default.
+show_audio_setup = ""
+# The project's broadcast metadata and what the next render writes.
+show_metadata = ""
+# Independent-file processing; available from File and the batch status control.
+collect_project = "Ctrl+Shift+Alt+J"
+show_file_batch = "Ctrl+Shift+Alt+B"
+# The user manual, installed beside the application. F1 explains the control
+# under the pointer; Shift+F1 opens the whole manual.
+show_manual = "Shift+F1"
+# The reference picture: the Video tab of the right dock, importing a file, and
+# moving the playhead by whole picture frames.
+show_video = ""
+import_video = ""
+video_step_forward = "Alt+."
+video_step_back = "Alt+,"
+show_automation = "A"
+# Analyse trigger tracks and preview editable volume ducking; unbound by default.
+show_generated_ducking = "Ctrl+Alt+U"
+start_recording = ""
+refresh_recording_inputs = ""
+record_new_track = ""
+toggle_record_punch = ""
+toggle_record_monitor = ""
+
+# Mastering (Phase 3 of the rebuild). Export renders the mix with the delivery
+# the Mastering page shows; analyse renders it for the page's waveform, loudness
+# history and report; the reset restarts the live R128 meter.
+export = "Ctrl+Shift+E"
+export_mix = ""
+export_selected_tracks = ""
+analyse_master = "Ctrl+Shift+A"
+reset_loudness = "Ctrl+Alt+L"
+preview_before = "Ctrl+Alt+B"
+show_master_plugins = "Ctrl+Alt+P"
+
+# Waveform (Phase 2). Silence is delete-leaving-the-gap whatever ripple says;
+# normalize peaks the selection at -1 dBFS through the clip gain.
+silence = "Ctrl+Delete"
+normalize = "Ctrl+Shift+L"
+reverse = "Alt+R"
+convert_mono = "Ctrl+Alt+1"
+convert_stereo = "Ctrl+Alt+2"
+cancel_sample_edit = "Ctrl+Alt+Escape"
+paste_to_new = "Ctrl+Shift+V"
+
+# Multitrack (Phase 1). Markers belong to the session, not a track; M with a
+# selection makes a range marker. Snap and ripple are modes, so their keys are
+# plain letters -- the ones an editor's hand rests on.
+add_marker = "M"
+prev_marker = "Ctrl+,"
+next_marker = "Ctrl+."
+toggle_snap = "S"
+toggle_ripple = "R"
+show_mixer = "Ctrl+Shift+M"
+track_taller = "Alt+="
+track_shorter = "Alt+-"
+duplicate_track = "Ctrl+Shift+D"
+
+# Spectral (Phase 4). The three selection tools are plain letters like snap and
+# ripple; the repairs and the band are chords, because they change audio.
+spectral_tool_time = "T"
+spectral_tool_rect = "B"
+spectral_tool_band = "F"
+spectral_clear_band = "Ctrl+Shift+B"
+spectral_attenuate = "Ctrl+Shift+U"
+spectral_heal = "Ctrl+Shift+H"
+spectral_rebuild = "Ctrl+Alt+R"
+spectral_scale = "Ctrl+Alt+F"
+spectral_capture_print = "Ctrl+Alt+N"
+spectral_denoise = "Ctrl+Alt+D"
+spectral_tool_lasso = "L"
+spectral_tool_brush = "P"
+spectral_tool_spot = "H"
+spectral_tool_harmonic = "O"
+spectral_hum_50 = "Ctrl+Alt+5"
+spectral_hum_60 = "Ctrl+Alt+6"
+spectral_mask_subtract = "X"
+spectral_mask_intersect = "Ctrl+Alt+X"
+spectral_mask_undo = "Ctrl+Backspace"
+spectral_clear_mask = "Ctrl+Shift+X"
+spectral_brush_larger = "Ctrl+]"
+spectral_brush_smaller = "Ctrl+["
+spectral_find_clicks = "Ctrl+Alt+K"
+spectral_heal_clicks = "Ctrl+Alt+J"
+spectral_auto_heal = "Ctrl+Shift+Alt+K"
+
+# Workspaces (BRIEF.md amendment A15).
+workspace_waveform = "Alt+1"
+workspace_multitrack = "Alt+2"
+workspace_spectral = "Alt+3"
+workspace_mastering = "Alt+4"
+stop = "Ctrl+Space"
+
+# Clip movement and sample-accurate looping.
+timeline_select = "V"
+timeline_move = "G"
+cancel_clip_move = "Ctrl+Escape"
+toggle_loop = "Ctrl+L"
+toggle_metronome = "Alt+K"
+
+# Fixed-position slip and rendered crossfades (A39/A40)
+timeline_slip = "Y"
+slip_earlier = "Ctrl+Alt+Left"
+slip_later = "Ctrl+Alt+Right"
+crossfade_linear = "Ctrl+Shift+F"
+crossfade_power = "Ctrl+Shift+Alt+F"
+
+# Pitch-preserving, rendered clip stretch (A43).
+show_stretch = "Alt+T"
+show_crossfade = "Alt+F"
+show_routing = "Alt+U"
+
+# Channel and clipboard editing
+show_channel_map = "Alt+C"
+show_insert_silence = "Alt+I"
+show_mix_paste = "Alt+P"
+show_session_properties = "Alt+S"
+show_clip_properties = "Ctrl+Alt+I"
+show_clip_envelopes = "Ctrl+Alt+E"
+show_clip_effects = "Ctrl+Alt+V"
+show_analysis = "Ctrl+Alt+M"
+show_frequency_analysis = "Ctrl+Alt+Q"
+show_phase_analysis = "Ctrl+Alt+H"
+show_generate = "Ctrl+Alt+T"
+show_speech_align = "Ctrl+Alt+W"
+show_remix = "Ctrl+Alt+Y"
+show_audio_load = "Ctrl+Alt+Z"
+show_clip_groups = "Ctrl+Alt+G"
+toggle_clip_group_link = "Ctrl+Shift+G"
+show_preferences = "Ctrl+Alt+,"
+show_track_loudness = "Ctrl+Shift+Alt+L"
+show_storage = "Alt+D"
+
+# Optional installed Quick Fixes processors.
+show_essential_dynamics = "Ctrl+Shift+Alt+D"
+show_essential_gate = "Ctrl+Shift+Alt+G"
+show_essential_deesser = "Ctrl+Shift+Alt+E"
+show_essential_eq = "Ctrl+Shift+Alt+Q"
+show_essential_clarity = "Ctrl+Shift+Alt+C"
+show_essential_ducking = "Ctrl+Shift+Alt+U"
+show_essential_pitch = "Ctrl+Shift+Alt+T"
+
+# Local rendered speech noise suppression.
+show_voice_cleanup = "Ctrl+Shift+Alt+V"
+
+# Contextual help is local and works while a control has keyboard focus.
+show_control_help = "F1"

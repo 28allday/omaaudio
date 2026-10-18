@@ -1,0 +1,17 @@
+{
+  "plugins": ["urn:omaaudio:lowcut"],
+  "presets": [
+    {"id": "voice", "name": "Spoken voice", "group": "Voice",
+     "note": "80 Hz: below the voice, above traffic and handling noise.",
+     "controls": {"frequency": 80}},
+    {"id": "deep-voice", "name": "Deep voice", "group": "Voice",
+     "note": "60 Hz keeps the chest of a low voice.",
+     "controls": {"frequency": 60}},
+    {"id": "close-mic", "name": "Close microphone", "group": "Voice",
+     "note": "120 Hz tames the bass build-up of a microphone held very close.",
+     "controls": {"frequency": 120}},
+    {"id": "phone", "name": "Phone recording", "group": "Repair",
+     "note": "150 Hz: a phone or video-call voice has nothing useful below it.",
+     "controls": {"frequency": 150}}
+  ]
+}

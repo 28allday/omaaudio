@@ -1,0 +1,14 @@
+{
+  "plugins": ["urn:omaaudio:width"],
+  "presets": [
+    {"id": "mono", "name": "Mono", "group": "Utility",
+     "note": "Both channels the same.",
+     "controls": {"width": 0}},
+    {"id": "narrow", "name": "Narrower", "group": "Music",
+     "note": "60 %: a music bed or ambience that should sit behind a voice.",
+     "controls": {"width": 60}},
+    {"id": "wide", "name": "Wider", "group": "Music",
+     "note": "140 %: a little more space; check the mix still works in mono.",
+     "controls": {"width": 140}}
+  ]
+}

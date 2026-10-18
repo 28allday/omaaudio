@@ -1,0 +1,31 @@
+{
+  "plugins": ["http://gareus.org/oss/lv2/fil4#stereo", "http://gareus.org/oss/lv2/fil4#mono"],
+  "presets": [
+    {"id": "voice-clarity", "name": "Voice clarity", "group": "Voice",
+     "note": "A low cut at 80 Hz, less mud at 250 Hz, a little presence and air: a common first move on a spoken voice.",
+     "controls": {"enable": 1, "HighPass": 1, "HPfreq": 80, "HPQ": 0.7,
+                  "sec1": 1, "freq1": 250, "q1": 0.8, "gain1": -3,
+                  "sec3": 1, "freq3": 3500, "q3": 0.8, "gain3": 2.5,
+                  "HSsec": 1, "HSfreq": 10000, "HSq": 1, "HSgain": 2}},
+    {"id": "rumble-cut", "name": "Rumble cut", "group": "Repair",
+     "note": "A high-pass at 80 Hz takes out traffic, handling noise and air conditioning.",
+     "controls": {"enable": 1, "HighPass": 1, "HPfreq": 80, "HPQ": 0.7}},
+    {"id": "de-mud", "name": "De-mud", "group": "Voice",
+     "note": "A low cut at 60 Hz and a broad 4 dB dip around 300 Hz clear a boxy sound.",
+     "controls": {"enable": 1, "HighPass": 1, "HPfreq": 60, "HPQ": 0.7, "sec2": 1, "freq2": 300, "q2": 0.6, "gain2": -4}},
+    {"id": "presence", "name": "Presence lift", "group": "Voice",
+     "note": "3 dB around 4 kHz helps a voice cut through.",
+     "controls": {"enable": 1, "sec3": 1, "freq3": 4000, "q3": 0.8, "gain3": 3}},
+    {"id": "air", "name": "Air lift", "group": "Music",
+     "note": "A gentle high shelf from 12 kHz.",
+     "controls": {"enable": 1, "HSsec": 1, "HSfreq": 12000, "HSq": 1, "HSgain": 3}},
+    {"id": "telephone", "name": "Telephone", "group": "Effect",
+     "note": "Cuts below 300 Hz and above 3.4 kHz with a lift at 1.5 kHz.",
+     "controls": {"enable": 1, "HighPass": 1, "HPfreq": 300, "HPQ": 0.7, "LowPass": 1, "LPfreq": 3400, "LPQ": 0.7,
+                  "sec2": 1, "freq2": 1500, "q2": 0.8, "gain2": 3}},
+    {"id": "acoustic-guitar", "name": "Acoustic guitar", "group": "Music",
+     "note": "Less boom at 200 Hz, a touch of string detail at 5 kHz and above.",
+     "controls": {"enable": 1, "HighPass": 1, "HPfreq": 80, "HPQ": 0.7, "sec1": 1, "freq1": 200, "q1": 0.8, "gain1": -3,
+                  "sec4": 1, "freq4": 5000, "q4": 0.8, "gain4": 2, "HSsec": 1, "HSfreq": 10000, "HSq": 1, "HSgain": 1.5}}
+  ]
+}

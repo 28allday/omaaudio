@@ -1,0 +1,17 @@
+{
+  "plugins": ["http://gareus.org/oss/lv2/darc#stereo", "http://gareus.org/oss/lv2/darc#mono"],
+  "presets": [
+    {"id": "podcast-voice", "name": "Podcast voice", "group": "Voice",
+     "note": "3:1 from −24 dB with a 10 ms attack: steady levelling for speech.",
+     "controls": {"enable": 1, "inputgain": 0, "threshold": -24, "Ratio": 0.666, "attack": 0.01, "release": 0.12}},
+    {"id": "gentle-vocal", "name": "Gentle vocal", "group": "Voice",
+     "note": "2:1 from −20 dB, slower, for a sung vocal.",
+     "controls": {"enable": 1, "inputgain": 0, "threshold": -20, "Ratio": 0.5, "attack": 0.02, "release": 0.15}},
+    {"id": "mix-bus-glue", "name": "Mix bus glue", "group": "Music",
+     "note": "2:1 with a slow attack on the whole mix.",
+     "controls": {"enable": 1, "inputgain": 0, "threshold": -18, "Ratio": 0.5, "attack": 0.03, "release": 0.3}},
+    {"id": "drum-bus", "name": "Drum bus", "group": "Music",
+     "note": "4:1 with a quick release for punch on a drum group.",
+     "controls": {"enable": 1, "inputgain": 0, "threshold": -20, "Ratio": 0.75, "attack": 0.01, "release": 0.1}}
+  ]
+}

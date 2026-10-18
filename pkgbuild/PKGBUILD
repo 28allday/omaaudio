@@ -1,0 +1,72 @@
+# Maintainer: 28allday
+
+pkgname=omaaudio
+pkgver=0.2.0beta1
+pkgrel=1
+pkgdesc='OmaAudio — audio editing, mixing and mastering for Omarchy'
+arch=('x86_64' 'aarch64')
+url='https://github.com/28allday/omaaudio'
+license=('MIT')
+install='omaaudio.install'
+options=('!debug')
+depends=('hicolor-icon-theme' 'qt6-base' 'qt6-declarative>=6.8' 'qt6-svg' 'qt6-wayland' 'xdg-desktop-portal' 'ffmpeg'
+         'libxcb' 'xcb-util-wm'
+         'pipewire' 'python' 'libsndfile>=1.1.0' 'lilv' 'tomlplusplus' 'rnnoise'
+         'calf' 'lsp-plugins-lv2' 'x42-plugins-lv2')
+makedepends=('gcc' 'make' 'meson' 'ninja' 'lv2' 'vulkan-headers' 'pkgconf')
+optdepends=('pipewire-jack: connect JACK applications through PipeWire'
+            'xorg-xwayland: open effects in their own windows on a Wayland desktop')
+source=()
+sha256sums=()
+
+# Builds the source tree this file sits in (the folder above pkgbuild/).
+build() {
+  cd "$startdir/.."
+  local jobs="${OMAAUDIO_BUILD_JOBS:-$(nproc)}"
+  # The audio engine first: the application links the static library it makes.
+  [ -d engine/build-release ] || meson setup --buildtype=release engine/build-release engine
+  meson compile -C engine/build-release -j "$jobs"
+  mkdir -p build
+  (cd build && qmake6 ../omaaudio.pro && make -j"$jobs")
+  /usr/bin/install -m755 engine/build-release/omaaudio-vst3-scan build/omaaudio-vst3-scan
+  rm -rf build/lv2/omaaudio.lv2
+  mkdir -p build/lv2/omaaudio.lv2
+  for file in denoise.so filters.so dynamics.so manifest.ttl denoise.ttl filters.ttl dynamics.ttl; do
+    cp "engine/build-release/plugins/omaaudio.lv2/$file" build/lv2/omaaudio.lv2/
+  done
+}
+
+package() {
+  cd "$startdir/.."
+  /usr/bin/install -Dm755 build/omaaudio "$pkgdir/usr/bin/omaaudio"
+  /usr/bin/install -Dm755 build/omaaudio-vst3-scan "$pkgdir/usr/lib/omaaudio/omaaudio-vst3-scan"
+  for file in denoise.so filters.so dynamics.so; do
+    /usr/bin/install -Dm755 "build/lv2/omaaudio.lv2/$file" "$pkgdir/usr/lib/omaaudio/lv2/omaaudio.lv2/$file"
+  done
+  for file in manifest.ttl denoise.ttl filters.ttl dynamics.ttl; do
+    /usr/bin/install -Dm644 "build/lv2/omaaudio.lv2/$file" "$pkgdir/usr/lib/omaaudio/lv2/omaaudio.lv2/$file"
+  done
+  /usr/bin/install -Dm644 tools/aaf_import.py "$pkgdir/usr/share/omaaudio/import/aaf_import.py"
+  /usr/bin/install -Dm644 tools/omf_import.py "$pkgdir/usr/share/omaaudio/import/omf_import.py"
+  /usr/bin/install -dm755 "$pkgdir/usr/share/omaaudio/import/aaf_vendor"
+  cp -r tools/aaf_vendor/aaf2 "$pkgdir/usr/share/omaaudio/import/aaf_vendor/"
+  find "$pkgdir/usr/share/omaaudio/import/aaf_vendor" -type d -name __pycache__ -prune -exec rm -r '{}' '+'
+  # Every third-party licence and notice OmaAudio credits.
+  for file in docs/licenses/*; do
+    [ -f "$file" ] && /usr/bin/install -Dm644 "$file" "$pkgdir/usr/share/licenses/$pkgname/$(basename "$file")"
+  done
+  /usr/bin/install -Dm644 docs/third-party-notices.md "$pkgdir/usr/share/licenses/$pkgname/CREDITS.md"
+  /usr/bin/install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  /usr/bin/install -Dm644 src/keymap/default.toml "$pkgdir/usr/share/omaaudio/keymap/default.toml"
+  # One packaged copy, linked by `omaaudio skill --link` as the calling user.
+  /usr/bin/install -Dm644 skills/omaaudio/SKILL.md "$pkgdir/usr/share/omaaudio/skills/omaaudio/SKILL.md"
+  # The user manual, read by Help › User Manual inside the application.
+  /usr/bin/install -Dm644 docs/user-manual.md "$pkgdir/usr/share/doc/$pkgname/manual.md"
+  /usr/bin/install -Dm644 docs/agent-cli.md "$pkgdir/usr/share/doc/$pkgname/agent-cli.md"
+  /usr/bin/install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+  for file in docs/release-[0-9]*.md; do
+    [ -f "$file" ] && /usr/bin/install -Dm644 "$file" "$pkgdir/usr/share/doc/$pkgname/$(basename "$file")"
+  done
+  /usr/bin/install -Dm644 "$startdir/omaaudio.svg" "$pkgdir/usr/share/icons/hicolor/scalable/apps/omaaudio.svg"
+  /usr/bin/install -Dm644 "$startdir/omaaudio.desktop" "$pkgdir/usr/share/applications/omaaudio.desktop"
+}

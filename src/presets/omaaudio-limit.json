@@ -1,0 +1,17 @@
+{
+  "plugins": ["urn:omaaudio:limit"],
+  "presets": [
+    {"id": "podcast", "name": "Podcast, peaks at −1 dB", "group": "Delivery",
+     "note": "Peaks held under −1 dB, the usual ceiling for podcast platforms.",
+     "controls": {"ceiling": -1, "release": 100}},
+    {"id": "streaming-music", "name": "Streaming music, −1 dB", "group": "Delivery",
+     "note": "A slower release for music, peaks under −1 dB.",
+     "controls": {"ceiling": -1, "release": 200}},
+    {"id": "broadcast", "name": "Broadcast, peaks at −2 dB", "group": "Delivery",
+     "note": "Extra headroom for deliveries that ask for −2 dB peaks.",
+     "controls": {"ceiling": -2, "release": 100}},
+    {"id": "safety", "name": "Safety catch", "group": "Delivery",
+     "note": "Only catches the odd stray peak just below full scale.",
+     "controls": {"ceiling": -0.3, "release": 50}}
+  ]
+}

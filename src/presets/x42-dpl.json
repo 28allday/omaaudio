@@ -1,0 +1,17 @@
+{
+  "plugins": ["http://gareus.org/oss/lv2/dpl#stereo", "http://gareus.org/oss/lv2/dpl#mono"],
+  "presets": [
+    {"id": "podcast", "name": "Podcast, true peak −1 dB", "group": "Delivery",
+     "note": "True-peak limiting at −1 dB, the usual ceiling for podcast platforms.",
+     "controls": {"enable": 1, "gain": 0, "threshold": -1, "release": 0.05, "truepeak": 1}},
+    {"id": "streaming-music", "name": "Streaming music, −1 dB", "group": "Delivery",
+     "note": "True-peak −1 dB with a slower release for music.",
+     "controls": {"enable": 1, "gain": 0, "threshold": -1, "release": 0.1, "truepeak": 1}},
+    {"id": "broadcast", "name": "Broadcast, true peak −2 dB", "group": "Delivery",
+     "note": "Extra headroom for deliveries that ask for −2 dB true peak.",
+     "controls": {"enable": 1, "gain": 0, "threshold": -2, "release": 0.05, "truepeak": 1}},
+    {"id": "safety", "name": "Safety catch", "group": "Delivery",
+     "note": "Only catches stray peaks just below full scale.",
+     "controls": {"enable": 1, "gain": 0, "threshold": -0.3, "release": 0.01, "truepeak": 0}}
+  ]
+}

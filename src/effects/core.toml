@@ -1,0 +1,67 @@
+# The Effects menu's core set: the everyday effects listed at the top of the
+# menu, by group, in this order. Everything else installed is under
+# Effects > All Effects and in Add Effect…
+#
+# Each name is an effect family: the plugin's name without its channel variant
+# (Mono, Stereo, LeftRight, MidSide, "(Mono)", "(Stereo)"). The menu adds the
+# stereo version and offers Left/Right and Mid/Side beside it where the plugin
+# has them. Families that are not installed are left out, so this list names
+# more than any one machine needs.
+#
+# Groups: dynamics, eq, reverb, delay, modulation, distortion, space,
+# restoration, pitch, meters, utility, other.
+
+dynamics = [
+    "LSP Compressor",
+    "LSP Multiband Compressor x8",
+    "LSP Limiter",
+    "LSP Gate",
+    "LSP Deesser",
+    "Calf Transient Designer",
+]
+
+eq = [
+    "LSP Parametric Equalizer x16",
+    "LSP Graphic Equalizer x16",
+    "LSP Filter",
+]
+
+reverb = [
+    "Calf Reverb",
+    "LSP Room Builder",
+    "x42 - IR Convolver",
+]
+
+delay = [
+    "Calf Vintage Delay",
+    "LSP Slapback Delay",
+]
+
+modulation = [
+    "LSP Chorus",
+    "LSP Flanger",
+    "LSP Phaser",
+]
+
+distortion = [
+    "Calf Saturator",
+    "Calf Tape Simulator",
+    "Calf Crusher",
+]
+
+space = [
+    "Calf Stereo Tools",
+    "Calf Haas Stereo Enhancer",
+]
+
+pitch = [
+    "Calf Pitch Tools",
+    "x42-Autotune",
+]
+
+meters = [
+    "EBU R128 Meter",
+    "True-Peak Meter",
+    "LSP Spectrum Analyzer",
+    "Stereo Phase-Correlation Meter",
+]

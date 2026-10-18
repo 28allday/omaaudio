@@ -1,0 +1,17 @@
+{
+  "plugins": ["urn:omaaudio:hum"],
+  "presets": [
+    {"id": "mains-50", "name": "50 Hz mains", "group": "Repair",
+     "note": "Europe, Africa, most of Asia and Australia: 50 Hz and three harmonics.",
+     "controls": {"mains": 50, "harmonics": 4}},
+    {"id": "mains-60", "name": "60 Hz mains", "group": "Repair",
+     "note": "The Americas and parts of Asia: 60 Hz and three harmonics.",
+     "controls": {"mains": 60, "harmonics": 4}},
+    {"id": "buzz-50", "name": "Strong buzz, 50 Hz", "group": "Repair",
+     "note": "A buzzing ground loop with many harmonics, at 50 Hz.",
+     "controls": {"mains": 50, "harmonics": 8}},
+    {"id": "buzz-60", "name": "Strong buzz, 60 Hz", "group": "Repair",
+     "note": "A buzzing ground loop with many harmonics, at 60 Hz.",
+     "controls": {"mains": 60, "harmonics": 8}}
+  ]
+}

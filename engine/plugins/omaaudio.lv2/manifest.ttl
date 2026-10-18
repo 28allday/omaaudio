@@ -1,0 +1,8 @@
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<urn:omaaudio:denoise> a lv2:Plugin ; lv2:binary <denoise.so> ; rdfs:seeAlso <denoise.ttl> .
+<urn:omaaudio:lowcut> a lv2:Plugin ; lv2:binary <filters.so> ; rdfs:seeAlso <filters.ttl> .
+<urn:omaaudio:hum> a lv2:Plugin ; lv2:binary <filters.so> ; rdfs:seeAlso <filters.ttl> .
+<urn:omaaudio:width> a lv2:Plugin ; lv2:binary <filters.so> ; rdfs:seeAlso <filters.ttl> .
+<urn:omaaudio:limit> a lv2:Plugin ; lv2:binary <dynamics.so> ; rdfs:seeAlso <dynamics.ttl> .
+<urn:omaaudio:gain> a lv2:Plugin ; lv2:binary <dynamics.so> ; rdfs:seeAlso <dynamics.ttl> .

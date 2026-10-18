@@ -1,0 +1,6 @@
+build/
+engine/build-release/
+pkgbuild/src/
+pkgbuild/pkg/
+*.pkg.tar.zst
+__pycache__/

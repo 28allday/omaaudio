@@ -1,0 +1,371 @@
+{
+  "sdkTag": "v3.8.1_build_84",
+  "sdkCommit": "3cdf9ca5d1f5b1b21e0a86832aa4abe55607bd96",
+  "archives": [
+    {
+      "component": "pluginterfaces",
+      "repository": "vst3_pluginterfaces",
+      "commit": "4f547e8e102b47de4a8b8aaf343c73b700786372",
+      "url": "https://codeload.github.com/steinbergmedia/vst3_pluginterfaces/tar.gz/4f547e8e102b47de4a8b8aaf343c73b700786372",
+      "archive": "vst3_pluginterfaces-4f547e8e102b47de4a8b8aaf343c73b700786372.tar.gz",
+      "bytes": 111441,
+      "sha256": "ee70777eebb8450fc04fae2a6dd452f723d12bfb8222af443b8c1f8a9259089a"
+    },
+    {
+      "component": "public.sdk",
+      "repository": "vst3_public_sdk",
+      "commit": "586dc5e6c8012c3e4b01c79389375cbe96bdb1da",
+      "url": "https://codeload.github.com/steinbergmedia/vst3_public_sdk/tar.gz/586dc5e6c8012c3e4b01c79389375cbe96bdb1da",
+      "archive": "vst3_public_sdk-586dc5e6c8012c3e4b01c79389375cbe96bdb1da.tar.gz",
+      "bytes": 12769122,
+      "sha256": "71319491b771068b8e2c5374c22830a339677e9d54c4cd33af4a0aa210e4c838"
+    }
+  ],
+  "files": [
+    {
+      "path": "pluginterfaces/base/conststringtable.h",
+      "bytes": 1475,
+      "sha256": "d081dd449e46059f75d3f47fb922d975611b13f6148fba58790f785d22b9b819"
+    },
+    {
+      "path": "pluginterfaces/base/doc.h",
+      "bytes": 19024,
+      "sha256": "57a85aaa01666863b0bb76e4ab449942333197f078f2cbf09782f5a32735c869"
+    },
+    {
+      "path": "pluginterfaces/base/falignpop.h",
+      "bytes": 1162,
+      "sha256": "c612b740f92c0d7426723af12d09083f26009e40a7cafe985801e6f3f706b60b"
+    },
+    {
+      "path": "pluginterfaces/base/falignpush.h",
+      "bytes": 1633,
+      "sha256": "464d603bf4ece2d09e0f59a6830eac2d34c2cd66ad42a872831c5f30ae86675b"
+    },
+    {
+      "path": "pluginterfaces/base/fplatform.h",
+      "bytes": 10386,
+      "sha256": "436bc9370183fe97c7bef6bd50edd77fd03c4dd900c036bb0a6c4f714a4e36f1"
+    },
+    {
+      "path": "pluginterfaces/base/fstrdefs.h",
+      "bytes": 9521,
+      "sha256": "c13810a921cfba8a2f20531b60b831f17e67c978ac368b7c2060ef976f5cd18e"
+    },
+    {
+      "path": "pluginterfaces/base/ftypes.h",
+      "bytes": 5592,
+      "sha256": "2a9273012944c30ff6bf2975066057cdba39464afffdc5d65a9bff5cd6264fd9"
+    },
+    {
+      "path": "pluginterfaces/base/funknown.h",
+      "bytes": 21996,
+      "sha256": "e0d9609224fe15491c9ccd1463d964c303f1d5a6149fabf849e87f2c14be1951"
+    },
+    {
+      "path": "pluginterfaces/base/funknownimpl.h",
+      "bytes": 14175,
+      "sha256": "b68596dc656cb922ccb35041b68f7d0db0e5a69d81d95f7100556c979266d730"
+    },
+    {
+      "path": "pluginterfaces/base/futils.h",
+      "bytes": 3048,
+      "sha256": "968163112dd84c6094c20a8a1e9a4042ffcd3187f4caf4203dd2365eb1ea6f3c"
+    },
+    {
+      "path": "pluginterfaces/base/fvariant.h",
+      "bytes": 8356,
+      "sha256": "85a7b2a3d3ed556ee31ca2c04668317fae38146469e603fdb337cb789e92900d"
+    },
+    {
+      "path": "pluginterfaces/base/geoconstants.h",
+      "bytes": 2734,
+      "sha256": "885f5bde3e9b7f2356a245d3857bd5493ff6879a2e2f5665986097f0b3ff1f4b"
+    },
+    {
+      "path": "pluginterfaces/base/ibstream.h",
+      "bytes": 3609,
+      "sha256": "9530d37a36ceab42f7b03771f78337d5892e3328e805a9ff4e219409a1766c1e"
+    },
+    {
+      "path": "pluginterfaces/base/icloneable.h",
+      "bytes": 1509,
+      "sha256": "85db7f9ea1ae17b519dfa7df2770eb5ac5a6dcd2d1f3ad1f8ddc124e9ae463cb"
+    },
+    {
+      "path": "pluginterfaces/base/ierrorcontext.h",
+      "bytes": 1931,
+      "sha256": "f44813787b20588e46db4bf5103129eb899dce6c5128164475d6e8125080a23b"
+    },
+    {
+      "path": "pluginterfaces/base/ipersistent.h",
+      "bytes": 7712,
+      "sha256": "d9c94cb04cb90d27efa20b94501aa50bd8bf15bd4c4b72e9767c4af75a62e3b6"
+    },
+    {
+      "path": "pluginterfaces/base/ipluginbase.h",
+      "bytes": 17328,
+      "sha256": "e10e9a4b9b0811c392af5758542e1f72875b56ebe7e1673d5075bc1160d9fd0b"
+    },
+    {
+      "path": "pluginterfaces/base/iplugincompatibility.h",
+      "bytes": 3771,
+      "sha256": "7db596b736d226a09102b73fa7dd44b7d518d51aac0a2119a4a13261da85ff4b"
+    },
+    {
+      "path": "pluginterfaces/base/istringresult.h",
+      "bytes": 3263,
+      "sha256": "7c02de61122a0830f1429a1a2fc7cd855f6061d513b6a88c2dc6bf4858fa313e"
+    },
+    {
+      "path": "pluginterfaces/base/iupdatehandler.h",
+      "bytes": 3596,
+      "sha256": "c8f75a049d72f3112c1d9f391c23dba88cdf838bbee7edebda5b68c83f7ced64"
+    },
+    {
+      "path": "pluginterfaces/base/keycodes.h",
+      "bytes": 4475,
+      "sha256": "ca1101c96ac48b13bfc85d9f743547611147ef535b382827535216c685644d01"
+    },
+    {
+      "path": "pluginterfaces/base/pluginbasefwd.h",
+      "bytes": 1112,
+      "sha256": "e6f141de4f68b75fdc6b98d2c3d588ed0ddb223ab8913b175e89398f6057cc39"
+    },
+    {
+      "path": "pluginterfaces/base/smartpointer.h",
+      "bytes": 9572,
+      "sha256": "f690163a2d5fa71e76cce1909ae719561031b897f79342ddf38190b2ed9613b3"
+    },
+    {
+      "path": "pluginterfaces/base/typesizecheck.h",
+      "bytes": 3223,
+      "sha256": "99288a4b2191e3edb48f1a365ef2ba29b5c8211b57b08a93ae2ed9416bbdf74e"
+    },
+    {
+      "path": "pluginterfaces/base/ucolorspec.h",
+      "bytes": 4201,
+      "sha256": "390263cb59398c751dc247ca404a560f3d049cf0fde95fb72b686cf8ca51633f"
+    },
+    {
+      "path": "pluginterfaces/base/ustring.h",
+      "bytes": 4326,
+      "sha256": "6bf846f939a0a944576e543b2455e9153fad616f781d26673f4eed14d03ae844"
+    },
+    {
+      "path": "pluginterfaces/gui/iplugview.h",
+      "bytes": 12575,
+      "sha256": "024e6c4ea59ba6961bc45431ead6b2a8c60231250b2c181a6de99d62a1cfdc11"
+    },
+    {
+      "path": "pluginterfaces/gui/iplugviewcontentscalesupport.h",
+      "bytes": 3531,
+      "sha256": "70061e5c86a18e7b922e6a725565dad93f197b85e3e1e8171d064dbb8818e228"
+    },
+    {
+      "path": "pluginterfaces/gui/iwaylandframe.h",
+      "bytes": 5774,
+      "sha256": "8a87839aeb42fd43efd9878abb4bc82bae6cc321b13ea58779fa3f4683f084c1"
+    },
+    {
+      "path": "pluginterfaces/test/itest.h",
+      "bytes": 5840,
+      "sha256": "fe25c998cc82898862901a581abba2ee0e951b2d9ea3f0eed39b1622c4409452"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstattributes.h",
+      "bytes": 5647,
+      "sha256": "61b70959f234145033c986847e1bdd45c45a8f244c927b2eb48d838c2e6054b3"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstaudioprocessor.h",
+      "bytes": 24135,
+      "sha256": "6289b19c8300fb381da7688414fae52d5ca139371f910830532204b860bd6549"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstautomationstate.h",
+      "bytes": 2513,
+      "sha256": "1da7e6b9a355b55650718f771df0b00d9d34f2f02b06cf83cf6f9b508929691b"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstchannelcontextinfo.h",
+      "bytes": 9301,
+      "sha256": "1e3cd5b992e92d1cf58d87060443fa12dd539cfea41e5db9ffa0ebab8d6a93c0"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstcomponent.h",
+      "bytes": 9283,
+      "sha256": "cc587e34c009388d4187948c14a651df1481a01920abe895023094ca5b13faee"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstcontextmenu.h",
+      "bytes": 8536,
+      "sha256": "63a9e753aeb6fc513d9e0cccde0206d0e431a31a3966082e9a373375820b9365"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstdataexchange.h",
+      "bytes": 9622,
+      "sha256": "3430c45e23feb2571bee3c84a96fbf5724b29abf53478267213da582f68474b9"
+    },
+    {
+      "path": "pluginterfaces/vst/ivsteditcontroller.h",
+      "bytes": 31098,
+      "sha256": "a1aba69d8d411fdae6f7bee422fa9eb747a312a9fb517ff3436ee06d45a4e051"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstevents.h",
+      "bytes": 8564,
+      "sha256": "3650f62d7152a4e5e8b4912c95d28a55a265da08c04b0a347e4132a8d5c8134d"
+    },
+    {
+      "path": "pluginterfaces/vst/ivsthostapplication.h",
+      "bytes": 5927,
+      "sha256": "b7ef5b02f24c103e952e18b3e974e97b3c23d19c870a46c7c3aad36af8832332"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstinterappaudio.h",
+      "bytes": 4950,
+      "sha256": "61960f26f399a39a5ce75d831e815fd057bc5329e92eeab5bfca6fe3830eff98"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstmessage.h",
+      "bytes": 3783,
+      "sha256": "cbd141fbd77264fa623b8de43aff795059599ead17c70a0ac4349c9647b42b64"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstmidicontrollers.h",
+      "bytes": 5552,
+      "sha256": "327b0b822e17577537d09b98f4de80ce1591ebde87f95a0b9976584326808170"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstmidilearn.h",
+      "bytes": 3947,
+      "sha256": "8d5fe7fdbbe359daa228b3244216e73daccdabdd993e2796eb8276d8abed2709"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstmidimapping2.h",
+      "bytes": 8041,
+      "sha256": "1b30ed031ccb161ece2de4b5cc1df10293b492b54bfc19a9a65472debc4ef59e"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstnoteexpression.h",
+      "bytes": 14534,
+      "sha256": "18efe1d025e3c10c9e062e9b53fa1726198e77b9eaba1819ae78e6cead1a4ccd"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstnoteonorchestralarticulationinfo.h",
+      "bytes": 4225,
+      "sha256": "ea21e899f970ca0b9b3811981bffadf86c49d6c3a55e0a649877c89b5e59a455"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstparameterchanges.h",
+      "bytes": 6258,
+      "sha256": "4f177d8f9e207fc4f247fde5aebfbdf863d02bced08a6c2d21d759f043eea3dd"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstparameterfunctionname.h",
+      "bytes": 6701,
+      "sha256": "31a01936c5a34867d2dcc3cdab7c266b4f8ade0a1305ae5862f953a8b59f80e7"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstphysicalui.h",
+      "bytes": 6270,
+      "sha256": "2d131c1800b6c371a58a471cf33f4ce517a16ad4d6c1afebc5c4570ce0ec60a9"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstpluginterfacesupport.h",
+      "bytes": 2427,
+      "sha256": "753a7b6c9a1d55906f8c7cf061b98ab1a28f4934f31c05aae30bb5dc2151788d"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstplugview.h",
+      "bytes": 2700,
+      "sha256": "0fa888b0d6afa0c424e0b7121f50f6b91781b582bb0540424512f39b9480894e"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstprefetchablesupport.h",
+      "bytes": 3949,
+      "sha256": "18f04b2104d64c201217ed4ed927131d4e3f7d73508c81b15da5021bfbe1e982"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstprocesscontext.h",
+      "bytes": 6775,
+      "sha256": "51ca6f48b56f5f57cde4b03a6923689cf6a5c412c9ea7941fc04f934df9a4c0d"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstremapparamid.h",
+      "bytes": 3269,
+      "sha256": "8305c23704578d9e9fcf324ed5801d1f807849468f58d530bf50f313557b8cff"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstrepresentation.h",
+      "bytes": 14495,
+      "sha256": "1daaa3678e75762cba13ba7f2f6834d48e6521b4cd8081fdb3e4843fe37781fc"
+    },
+    {
+      "path": "pluginterfaces/vst/ivsttestplugprovider.h",
+      "bytes": 3388,
+      "sha256": "72b0644427623fc3887ff501d8b9c02f2f3618ddc78617f7dcb381ee8a26ee6f"
+    },
+    {
+      "path": "pluginterfaces/vst/ivsttransportcontrol.h",
+      "bytes": 6920,
+      "sha256": "13fdf59566d3bc061c4b0815cf40a15121192b33c178bf8195cfc410e9fce637"
+    },
+    {
+      "path": "pluginterfaces/vst/ivstunits.h",
+      "bytes": 12879,
+      "sha256": "035db2155bb7065b534bd7b5265cdfdddb4c6e6513df9fdc60658cba3e089a75"
+    },
+    {
+      "path": "pluginterfaces/vst/vstpresetkeys.h",
+      "bytes": 18952,
+      "sha256": "95f1ec6fb881669ac309116a7d952f49beebb11c707469873434a0643b7961e4"
+    },
+    {
+      "path": "pluginterfaces/vst/vstpshpack4.h",
+      "bytes": 1210,
+      "sha256": "b3f7b437dba9075c76bf0c6311b2ef008a3a8c4e2f22e616da64c4d5444685a3"
+    },
+    {
+      "path": "pluginterfaces/vst/vstspeaker.h",
+      "bytes": 61916,
+      "sha256": "f7942918bc52e78c2f061f77d2d28761f8a7b38a364cc3985bc22da21c8418d4"
+    },
+    {
+      "path": "pluginterfaces/vst/vsttypes.h",
+      "bytes": 8130,
+      "sha256": "46594b67f42c9c61f37c64846719549e983962854a363725cf98268d34f2d1e2"
+    },
+    {
+      "path": "pluginterfaces/base/funknown.cpp",
+      "bytes": 13219,
+      "sha256": "387d49c2b711aa1ad58c7a911992333e3a86f6fb709ba70cec85a95766a9e766"
+    },
+    {
+      "path": "pluginterfaces/base/coreiids.cpp",
+      "bytes": 1462,
+      "sha256": "45e398efdbef5f791209be17bd463951596a18e30901912dfcdd727246c73a28"
+    },
+    {
+      "path": "public.sdk/source/vst/vstinitiids.cpp",
+      "bytes": 5361,
+      "sha256": "9e18c4164342828a8e729c3f397230d662fd43c0d51b521ce14eed983ee174f1"
+    },
+    {
+      "path": "pluginterfaces/LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "e86d79e19e4a33ebc442d2e0d083887dfc75a2a8de9fe17eeddedb84810ad74e"
+    },
+    {
+      "path": "public.sdk/LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "e86d79e19e4a33ebc442d2e0d083887dfc75a2a8de9fe17eeddedb84810ad74e"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1094,
+      "sha256": "e86d79e19e4a33ebc442d2e0d083887dfc75a2a8de9fe17eeddedb84810ad74e"
+    }
+  ]
+}
